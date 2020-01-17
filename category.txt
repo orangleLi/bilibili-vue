@@ -1,0 +1,101 @@
+动画1 番剧13 国创167 音乐3 舞蹈129 科技36 数码188 游戏4 娱乐5 鬼畜119 电影23 电视剧11 纪录片177 影视181 时尚155 生活160 广告165 直播 相簿
+
+动画
+https://api.bilibili.com/x/web-interface/ranking/region?rid=1&day=7&jsonp=jsonp
+24, 25, 47, 27, 86
+
+番剧
+https://api.bilibili.com/x/web-interface/ranking/region?rid=13&day=7&jsonp=jsonp
+33, 32, 51, 152
+
+国创
+https://api.bilibili.com/x/web-interface/ranking/region?rid=167&day=7&jsonp=jsonp
+153, 168, 169, 170
+
+音乐
+https://api.bilibili.com/x/web-interface/ranking/region?rid=3&day=7&jsonp=jsonp  热门推荐
+
+https://api.bilibili.com/x/web-interface/ranking/region?rid=28&day=1&jsonp=jsonp 原创音乐 
+rid day typename
+31  1 翻唱
+30  1 VOCALOID·UTAU
+194 1 电音
+59  1 演奏
+29  1 音乐现场
+54  1 []
+130 1 音乐综合
+
+舞蹈
+https://api.bilibili.com/x/web-interface/ranking/region?rid=129&day=7&jsonp=jsonp 热门对剑
+
+20  3 宅舞
+154  3 舞蹈综合
+156  3 舞蹈教程
+198 街舞
+199 明星舞蹈
+200 中国舞
+
+科技
+https://api.bilibili.com/x/web-interface/ranking/region?rid=36&day=7&jsonp=jsonp
+124 3 趣味科普人文
+122 3 野生技术协会
+39 演讲? 公开课
+96 星海
+98 机械
+176 汽车
+
+数码
+https://api.bilibili.com/x/web-interface/ranking/region?rid=188&day=7&jsonp=jsonp
+95 7
+189
+190
+191
+
+游戏
+https://api.bilibili.com/x/web-interface/ranking/region?rid=4&day=7&jsonp=jsonp
+17 3
+171
+172
+65
+121
+136
+19
+
+娱乐
+https://api.bilibili.com/x/web-interface/ranking/region?rid=5&day=7&jsonp=jsonp
+71 137 131 day和主链接day一样
+
+鬼畜
+https://api.bilibili.com/x/web-interface/ranking/region?rid=119&day=7&jsonp=jsonp
+22 26 126 127
+
+电影
+https://api.bilibili.com/x/web-interface/ranking/region?rid=23&day=7&jsonp=jsonp
+147 145 146 83
+
+电视剧
+https://api.bilibili.com/x/web-interface/ranking/region?rid=11&day=7&jsonp=jsonp
+185 187
+
+纪录片
+https://api.bilibili.com/x/web-interface/ranking/region?rid=177&day=7&jsonp=jsonp
+37 178 179 180
+
+影视
+https://api.bilibili.com/x/web-interface/ranking/region?rid=181&day=7&jsonp=jsonp
+182 183 85 184
+
+时尚
+https://api.bilibili.com/x/web-interface/ranking/region?rid=155&day=7&jsonp=jsonp
+157 158 164 159 192
+
+生活
+https://api.bilibili.com/x/web-interface/ranking/region?rid=160&day=7&jsonp=jsonp
+138 21 76 75 161 163 162 174
+
+广告
+https://api.bilibili.com/x/web-interface/ranking/region?rid=166&day=7&jsonp=jsonp
+
+https://api.bilibili.com/archive_rank/getarchiverankbypartion?jsonp=jsonp&tid=166&pn=1
+广告 -> 最新视频
+ 

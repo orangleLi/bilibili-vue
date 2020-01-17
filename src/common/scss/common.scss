@@ -1,0 +1,75 @@
+$theme: #fb7299;
+$theme-bg: #fb7299;
+$color51: rgb(51, 51, 51);
+$color-gray: #757575;
+$size34: .34rem;
+$size32: .32rem;
+$size30: .30rem;
+$size28: .28rem;
+$size26: .26rem;
+$size24: .24rem;
+$size22: .22rem;
+$size20: .20rem;
+$size18: .18rem;
+$m-bottom: 1.3rem;
+
+$video-height: 180px;
+.occupy{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding-top: 1.9rem;
+}
+.clamp{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.clamp-1{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.row {
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    border-bottom:1px solid #e6e6e6;
+    height: 200%;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+  }
+}
+
+/* 主题色关注按钮 */
+.opera{
+  .follow{
+    background: $theme-bg;
+    border: none;
+    color: #fff;
+    padding: .05rem .18rem;
+    font-size: .26rem;
+    -webkit-border-radius: .05rem;
+    -moz-border-radius: .05rem;
+    border-radius: .05rem;
+    display: flex;
+    align-items: center;
+    &::before{
+      content: '+';
+      font-size: .36rem;
+      line-height: .36rem;
+      margin-right: .06rem;
+    }
+  }
+}
+/* 主题色关注按钮 */

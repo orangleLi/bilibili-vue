@@ -1,0 +1,128 @@
+{
+  "partition": [
+    {
+      "tname": "番剧",
+      "icon": "fanju.png"
+    },
+    {
+      "tname": "国创",
+      "icon": "guochuang.png"
+    },
+    {
+      "tname": "放映厅",
+      "icon": "fangyingting.png"
+    },
+    {
+      "tname": "纪录片",
+      "icon": "jilupian.png"
+    },
+    {
+      "tname": "漫画",
+      "icon": "manhua.png"
+    },
+    {
+      "tname": "专栏",
+      "icon": "zhuanlan.png"
+    },
+    {
+      "tname": "直播",
+      "icon": "zhibo.png"
+    },
+    {
+      "tname": "课堂",
+      "icon": "ketang.png"
+    },
+    {
+      "tname": "动画",
+      "icon": "donghua.png"
+    },
+    {
+      "tname": "音乐",
+      "icon": "yinyue.png"
+    },
+    {
+      "tname": "舞蹈",
+      "icon": "wudao.png"
+    },
+    {
+      "tname": "游戏",
+      "icon": "youxi.png"
+    },
+    {
+      "tname": "科技",
+      "icon": "keji.png"
+    },
+    {
+      "tname": "数码",
+      "icon": "shuma.png"
+    },
+    {
+      "tname": "生活",
+      "icon": "shenghuo.png"
+    },
+    {
+      "tname": "VLOG",
+      "icon": "vlog.png"
+    },
+    {
+      "tname": "鬼畜",
+      "icon": "guichu.png"
+    },
+    {
+      "tname": "时尚",
+      "icon": "shishang.png"
+    },
+    {
+      "tname": "广告",
+      "icon": "ad.png"
+    },
+    {
+      "tname": "娱乐",
+      "icon": "yule.png"
+    },
+    {
+      "tname": "影视",
+      "icon": "yingshi.png"
+    },
+    {
+      "tname": "电影",
+      "icon": "dianying.png"
+    },
+    {
+      "tname": "电视剧",
+      "icon": "dianshiju.png"
+    },
+    {
+      "tname": "会员购",
+      "icon": "vipgou.png"
+    },
+    {
+      "tname": "专题中心",
+      "icon": "zhuanti.png"
+    },
+    {
+      "tname": "全区排行榜",
+      "icon": "quanqurank.png"
+    },
+    {
+      "tname": "活动中心",
+      "icon": "huodongcenter.png"
+    },
+    {
+      "tname": "小黑屋",
+      "icon": "xiaoheiwu.png"
+    },
+    {
+      "tname": "游戏中心",
+      "icon": "gamecenter.png"
+    },
+    {
+      "tname": "游戏赛事",
+      "icon": "saishicenter.png"
+    },
+    {
+      "tname": "音频",
+      "icon": "yinpin.png"
+    }
+  ]
+}
