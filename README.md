@@ -1,4 +1,4 @@
-## 高仿bilibili的APP
+## 高仿bilibiliAPP
 
 ### 技术栈
 前端  vue + axios + webpack + scss
