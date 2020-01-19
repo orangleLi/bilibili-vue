@@ -24,10 +24,10 @@ export default new Router({
     {
       path: '/Home',
       name: 'Home',
-      component: Home,
-      meta: {
-        isLogin: true
-      }
+      component: Home
+      // meta: {
+      //   isLogin: true
+      // }
     },
     {
       path: '/Login',
