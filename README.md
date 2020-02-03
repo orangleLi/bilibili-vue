@@ -36,6 +36,8 @@ npm run dev
 ```
 先启动后台接口，再启动前端
 
+注：将ip地址修改为本机ip或localhost
+
 部分效果图
 
 主页
