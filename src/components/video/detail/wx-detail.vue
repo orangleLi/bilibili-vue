@@ -2,7 +2,7 @@
     <div class="video-detail">
       <div class="fixed-box">
         <div class="video_box" @click="transShowOpera" ref="videoBox" >
-          <video muted class="video_demo" id="video_demo" src="/static/video/32/Jay.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" :x5-video-orientation="isHScreen ? 'landscape': 'portraint'"
+          <video class="video_demo" id="video_demo" src="/static/video/32/Jay.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" :x5-video-orientation="isHScreen ? 'landscape': 'portraint'"
                  webkit-playsinline="true"
                  x-webkit-airplay="true"
                  playsinline="true"
@@ -99,7 +99,6 @@ import Blurb from './blurb/blurb'
 import Icomment from './comment/icomment'
 import CommentDetail from './comment/comment-detail'
 import {getNetworkType, setDuration} from '../../../common/js/util'
-// import flvjs from 'flv.js'
 export default {
   name: 'wx-detail',
   data () {
@@ -150,28 +149,6 @@ export default {
     this.$destroy('wx-detail')
   },
   mounted () {
-    // if (flvjs.isSupported()) {
-    //   let videoElement = document.getElementById('video_demo')
-    //   let flvPlayer = flvjs.createPlayer({
-    //     type: 'flv',
-    //     url: 'http://upos-hz-mirrorks3u.acgvideo.com/upgcxcode/88/97/77589788/77589788-1-32.flv?e=ig8euxZM2rNcNbRz7WdVhoM1hzUVhwdEto8g5X10ugNcXBlqNCNEto8g5gNvNE3DN0B5tZlqNxTEto8BTrNvN05fqx6S5ahE9IMvXBvE2ENvNCImNEVEK9GVqJIwqa80WXIekXRE9IB5QK==&uipk=5&nbs=1&deadline=1579431541&gen=playurl&os=ks3u&oi=1877347901&trid=b5a883718c704c4186694520b245a56au&platform=android&upsig=9fb19a45ae941a4824d3b6b1f55156fa&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=0'
-    //   })
-    //   flvPlayer.attachMediaElement(videoElement)
-    //   // flvPlayer._mediaElement.getAttribute('src').replace('http://192.168.5.197:8080', 'https://www.bilibili.com')
-    //   // blob:http://192.168.5.197:8080/17e648d2-f3b4-41fa-9012-063b9e9d9289
-    //   // blob:https://www.bilibili.com/81174792-a5e9-4f85-81bb-ff424ccca92b
-    //   // blob:https://www.bilibili.com/191ccd0e-e822-4c7c-84aa-e80e94d0c787
-    //   // blob:https://www.bilibili.com/cc71244d-f9ff-4fb1-b7d3-a51ed72d2523
-    //   // let src = videoElement.getAttribute('src').replace('http://192.168.5.197:8080', 'https://www.bilibili.com')
-    //   flvPlayer._mediaElement.setAttribute('src', 'blob:https://www.bilibili.com/c4ac4fbe-e08b-4ebf-aff7-fbc39578f257')
-    //   flvPlayer._mediaElement.setAttribute('currentSrc', 'blob:https://www.bilibili.com/c4ac4fbe-e08b-4ebf-aff7-fbc39578f257')
-    //   // flvPlayer._msectl._mediaSourceObjectURL = flvPlayer._msectl._mediaSourceObjectURL.replace('http://192.168.5.197:8080', 'https://www.bilibili.com')
-    //   this.flvPlayer = flvPlayer
-    //   console.log(flvPlayer)
-    //   // console.log(flvPlayer)
-    //   // flvPlayer.load()
-    //   // flvPlayer.play()
-    // }
     this.getDetail()
     this.dmInit()
     this.getDm()
@@ -233,11 +210,6 @@ export default {
       Array.from(dmObj).forEach(item => {
         item.style.animationPlayState = state
       })
-      if (state === 'paused' && this.dmTimer) {
-        this.dmTimer.forEach(item => {
-          clearInterval(item)
-        })
-      }
     },
     transShowOpera () {
       this.menuBox = false
@@ -462,7 +434,6 @@ export default {
     /*background:#000000 url(images/play.png) no-repeat center;*/
     background-size:15% auto;
     position: relative;
-    background: #000;
     /*background: rgba(0,0,0,.2);*/
     /*z-index: 2;*/
   }

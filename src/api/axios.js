@@ -1,6 +1,6 @@
 import axios from 'axios'
 import jsonp from './jsonp.js'
-const LOCAL_SERVER = 'http://192.168.5.197:3000'
+const LOCAL_SERVER = 'http://localhost:3000'
 
 const get = (url, params = {}) => {
   // url = LOCAL_SERVER + url + getParams(params)
