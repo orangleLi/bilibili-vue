@@ -2,7 +2,7 @@
     <div class="video-detail">
       <div class="fixed-box">
         <div class="video_box" @click="transShowOpera" ref="videoBox" >
-          <video class="video_demo" id="video_demo" src="/static/video/32/Jay.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" :x5-video-orientation="isHScreen ? 'landscape': 'portraint'"
+          <video class="video_demo" id="video_demo" src="../../../common/video/Jay.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" :x5-video-orientation="isHScreen ? 'landscape': 'portraint'"
                  webkit-playsinline="true"
                  x-webkit-airplay="true"
                  playsinline="true"
@@ -103,6 +103,7 @@ export default {
   name: 'wx-detail',
   data () {
     return {
+      vidoeUrl: '/static/video/Jay.mp4',
       swiperCurrent: 0,
       swiperOption: {
         autoplay: false,
@@ -159,6 +160,9 @@ export default {
     if (network) {
       this.isShowOpera = true
     }
+    // this.$get('/video').then(res => {
+    //   console.log(res)
+    // })
   },
   methods: {
     // 根据当前已播放设置进度条
