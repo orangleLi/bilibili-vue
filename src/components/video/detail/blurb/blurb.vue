@@ -28,11 +28,13 @@
       <span v-html="_dataTrans(detail.pubdate)"></span>
       <span>AV{{detail.aid}}</span>
     </div>
-    <div v-show="showTitle" class="forbidden">
-      <img src="../../../../common/img/forbidden.png"/>
-      <span>未经作者授权禁止转载</span>
-    </div>
-    <div class="desc" v-if="desc && showTitle">{{desc}}</div>
+    <transition-group name="intro-tag">
+      <div v-show="showTitle" class="forbidden" key="0">
+        <img src="../../../../common/img/forbidden.png"/>
+        <span>未经作者授权禁止转载</span>
+      </div>
+      <div class="desc" v-if="desc && showTitle" key="1">{{desc}}</div>
+    </transition-group>
     <div class="opera-box" v-if="statVideo">
       <div class="opera">
         <img src="../../../../common/img/icon_fav.png"/>
@@ -179,6 +181,8 @@ export default {
 <style scoped lang="scss">
   .detail-info{
     padding: .3rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   .author-info{
     display: flex;
@@ -258,6 +262,17 @@ export default {
       vertical-align: text-top;
     }
   }
+  /*.intro-tag-enter-active, .intro-tag-leave-active{
+      transition: all .5s;
+    }
+  .intro-tag-enter, .intro-tag-leave-to{
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }*/
   .desc{
     font-size: $size24;
     white-space: pre-wrap;

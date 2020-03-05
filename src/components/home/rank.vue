@@ -36,7 +36,7 @@ export default {
     },
     detail (aid, mid) {
       this.$router.push({
-        path: '/AV' + aid,
+        path: '/Detail/AV' + aid,
         query: {
           aid,
           mid

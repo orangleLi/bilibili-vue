@@ -3,14 +3,15 @@ import Router from 'vue-router'
 import Home from '@/components/home/Home'
 import Login from '@/components/login'
 import Search from '@/components/search/search-box'
+// import Detail from '@/components/video/detail/detail'
 import Detail from '@/components/video/detail/wx-detail'
 import Channel from '@/components/channel/channel'
 import pageNotFound from '@/base/page404'
 
 Vue.use(Router)
+// Router.befoe
 export default new Router({
   mode: 'history',
-  base: '/bilibili',
   routes: [
     {
       path: '/',
@@ -44,7 +45,7 @@ export default new Router({
       component: Search
     },
     {
-      path: '/:id',
+      path: '/Detail/:id',
       name: 'Detail',
       component: Detail
     },
