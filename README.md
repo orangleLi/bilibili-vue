@@ -40,16 +40,16 @@ npm run dev
 
 部分效果图
 
-主页
+## 主页
 ![](https://orangleli.github.io/imagesResources/主页.png)
 
-搜索
+## 搜索
 ![](https://orangleli.github.io/imagesResources/搜索.png)
 
-视频
+## 视频
 ![](https://orangleli.github.io/imagesResources/详情.png)
 
-换肤
+## 换肤
 ![](https://orangleli.github.io/imagesResources/theme-ex.png)
 
 ### 本项目只用于学习交流，请勿用于商业行为，如有问题，请联系1277947446@qq.com，感谢bilibili团队
