@@ -41,7 +41,7 @@ npm run dev
 部分效果图
 
 ## 主页
-![](https://orangleli.github.io/imagesResources/主页.png)
+![](https://orangleli.github.io/imagesResources/index.png)
 
 ## 搜索
 ![](https://orangleli.github.io/imagesResources/搜索.png)
