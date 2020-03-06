@@ -127,8 +127,9 @@ export default {
       color: #757575;
     }
     .active{
-      color: #fb7299;
-      border-bottom: .04rem solid #fb7299;
+      @include theme-main-color($theme-pink);
+      border-bottom: .04rem solid;
+      @include theme-border-color($theme-pink);
     }
   }
   .category-switch{

@@ -162,7 +162,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding-left: .22rem;
-    background: $theme-bg;
+    @include background-main-color($theme-pink);
   }
   .search{
     margin: .14rem 0;
@@ -222,7 +222,7 @@ export default {
         line-height: .88rem;
         border-bottom: .01rem solid #ccc;
         & >>> .suggest_high_light {
-          color: $theme;
+          @include theme-main-color($theme-pink);
           font-style: normal;
         }
       }

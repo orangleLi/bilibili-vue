@@ -1,5 +1,88 @@
-$theme: #fb7299;
-$theme-bg: #fb7299;
+$theme-pink: #fb7299; // 少女粉
+$theme-dark: #2d2d2d; // 夜间模式
+$theme-red: #f34336; // 姨妈红
+$theme-yellow: #fdc107; // 咸蛋黄
+$theme-green: #8bc24a; // 草苗绿
+$theme-blue: #2095f2; // 胖次蓝
+$theme-purple: #9d27b4; // 基佬紫
+
+//初次进入调用
+@mixin background-main-color($color){ //@mixin 后面的函数名称为自定义。
+  background-color: $color;   //背景色默认为参数
+  [background-main-color="theme-yellow"] & {    //如果条件成立，背景色则用$background-main-color2
+    background-color: $theme-yellow;    //这个$background-main-color2已经在theme.scss中定义过了。
+  }
+  [background-main-color="theme-dark"] & {
+    background-color: $theme-dark;
+  }
+  [background-main-color="theme-red"] & {
+    background-color: $theme-red;
+  }
+  [background-main-color="theme-green"] & {
+    background-color: $theme-green;
+  }
+  [background-main-color="theme-blue"] & {
+    background-color: $theme-blue;
+  }
+  [background-main-color="theme-purple"] & {
+    background-color: $theme-purple;
+  }
+  [background-main-color="theme-pink"] & {
+    background-color: $theme-pink;
+  }
+}
+
+@mixin theme-main-color($color) {
+  color: $color;
+  [theme-main-color="theme-yellow"] & {
+    color: $theme-yellow;
+  }
+  [theme-main-color="theme-dark"] & {
+    color: $theme-dark;
+  }
+  [theme-main-color="theme-red"] & {
+    color: $theme-red;
+  }
+  [theme-main-color="theme-green"] & {
+    color: $theme-green;
+  }
+  [theme-main-color="theme-blue"] & {
+    color: $theme-blue;
+  }
+  [theme-main-color="theme-purple"] & {
+    color: $theme-purple;
+  }
+  [theme-main-color="theme-pink"] & {
+    color: $theme-pink;
+  }
+}
+@mixin theme-border-color($color) {
+  border-color: $color;
+  [theme-border-color="theme-yellow"] & {
+    border-color: $theme-yellow;
+  }
+  [theme-border-color="theme-dark"] & {
+    border-color: $theme-dark;
+  }
+  [theme-border-color="theme-red"] & {
+    border-color: $theme-red;
+  }
+  [theme-border-color="theme-green"] & {
+    border-color: $theme-green;
+  }
+  [theme-border-color="theme-blue"] & {
+    border-color: $theme-blue;
+  }
+  [theme-border-color="theme-purple"] & {
+    border-color: $theme-purple;
+  }
+  [theme-border-color="theme-pink"] & {
+    border-color: $theme-pink;
+  }
+}
+
+$theme: $theme-pink;
+$theme-bg: $theme;
 $color51: rgb(51, 51, 51);
 $color-gray: #757575;
 $size34: .34rem;
@@ -54,7 +137,7 @@ $video-height: 180px;
 /* 主题色关注按钮 */
 .opera{
   .follow{
-    background: $theme-bg;
+    @include background-main-color($theme-pink);
     border: none;
     color: #fff;
     padding: .05rem .18rem;

@@ -1,9 +1,8 @@
 <template>
     <div class="ifooter">
-      <div class="footer" v-for="(item, index) in tabBar" :key="index" @click="Nav(item.pagePath)">
-        <img v-if="item.text === active" :src="item.selectedIconPath"/>
-        <img v-else :src="item.iconPath"/>
-        <span :class="item.text === active ? 'active' : ''">{{item.text}}</span>
+      <div class="footer" v-for="(item, index) in tabBar" :key="index" :class="active === item.text ? 'active': ''" @click="Nav(item.pagePath)">
+        <i class="iconfont icon" :class="item.icon"></i>
+        <span>{{item.text}}</span>
       </div>
     </div>
 </template>
@@ -23,14 +22,12 @@ export default {
         {
           pagePath: '/',
           text: '主页',
-          iconPath: require('@/common/img/icon_index.png'),
-          selectedIconPath: require('@/common/img/icon_index_s.png')
+          icon: 'icon-shouye'
         },
         {
           pagePath: '/Channel',
           text: '频道',
-          iconPath: require('@/common/img/icon_menu.png'),
-          selectedIconPath: require('@/common/img/icon_menu_s.png')
+          icon: 'icon-menu1'
         }
       ]
     }
@@ -47,8 +44,8 @@ export default {
   .ifooter{
     position: fixed;
     width: 100%;
-    height: 1rem;
     bottom: 0;
+    padding: .1rem 0;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -56,18 +53,14 @@ export default {
     text-align: center;
     .footer{
       flex: 1;
-      img{
-        width: .5rem;
-        height: .5rem;
+      font-size: $size22;
+      color: $color51;
+      font-weight: bold;
+      .icon{
         display: block;
-        margin: 0 auto;
       }
-      span{
-        font-size: $size22;
-        color: $color51;
-        &.active{
-          color: $theme;
-        }
+      &.active{
+        @include theme-main-color($theme-pink);
       }
     }
     &:after{

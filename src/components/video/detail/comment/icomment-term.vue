@@ -87,7 +87,7 @@ export default {
         }
         .follow{
           background: transparent;
-          color: $theme;
+          @include theme-main-color($theme-pink);
         }
       }
       .message{

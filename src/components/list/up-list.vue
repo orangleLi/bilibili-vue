@@ -111,7 +111,7 @@ export default {
     }
     .opera{
       .follow{
-        background: $theme-bg;
+        @include background-main-color($theme-pink);
         border: none;
         color: #fff;
         padding: .05rem .18rem;
@@ -133,7 +133,7 @@ export default {
   }
   .bili-up-video{
     .all-video{
-      color: $theme;
+      @include theme-main-color($theme-pink);
       font-size: $size20;
       text-align: center;
       padding: .15rem 0 .3rem 0;

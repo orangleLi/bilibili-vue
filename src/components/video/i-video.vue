@@ -99,7 +99,7 @@ export default {
         font-size: $size26;
         color: $color51;
         & >>> .keyword {
-          color: $theme;
+          @include theme-main-color($theme-pink);
           font-style: normal;
         }
       }

@@ -6,18 +6,60 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "1170589",
-      "name": "play",
-      "font_class": "play1",
-      "unicode": "e647",
-      "unicode_decimal": 58951
+      "icon_id": "6732042",
+      "name": "对勾_画板 1 副本 35",
+      "font_class": "duigou_huabanfuben",
+      "unicode": "e660",
+      "unicode_decimal": 58976
     },
     {
-      "icon_id": "2041685",
-      "name": "CN_bilibili B",
-      "font_class": "CN_bilibiliB",
-      "unicode": "e64e",
-      "unicode_decimal": 58958
+      "icon_id": "6010186",
+      "name": "收 藏 ",
+      "font_class": "shoucang",
+      "unicode": "e6f6",
+      "unicode_decimal": 59126
+    },
+    {
+      "icon_id": "8713207",
+      "name": "稍后再看@2x",
+      "font_class": "shaohouzaikanx",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "12183594",
+      "name": "调色板图标",
+      "font_class": "tiaosebantubiao",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "12460577",
+      "name": "历史记录",
+      "font_class": "lishijilu",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "13311153",
+      "name": "method-draw-image ",
+      "font_class": "method-draw-image",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "8762531",
+      "name": "menu",
+      "font_class": "menu1",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "12385830",
+      "name": "home",
+      "font_class": "shouye",
+      "unicode": "e600",
+      "unicode_decimal": 58880
     },
     {
       "icon_id": "4868889",
@@ -27,6 +69,20 @@
       "unicode_decimal": 58890
     },
     {
+      "icon_id": "5286714",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "1170589",
+      "name": "play",
+      "font_class": "play1",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
       "icon_id": "4933557",
       "name": "pause",
       "font_class": "pause",
@@ -34,11 +90,39 @@
       "unicode_decimal": 58938
     },
     {
-      "icon_id": "5286714",
-      "name": "全屏",
-      "font_class": "quanping",
-      "unicode": "e63f",
-      "unicode_decimal": 58943
+      "icon_id": "12757425",
+      "name": "close (1)",
+      "font_class": "close",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "12755215",
+      "name": "menu2",
+      "font_class": "menu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "12747059",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "12737351",
+      "name": "message (1)",
+      "font_class": "message2",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "12737232",
+      "name": "message",
+      "font_class": "message",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "12735892",
@@ -95,41 +179,6 @@
       "font_class": "video_review",
       "unicode": "e60d",
       "unicode_decimal": 58893
-    },
-    {
-      "icon_id": "12737232",
-      "name": "message",
-      "font_class": "message",
-      "unicode": "e60e",
-      "unicode_decimal": 58894
-    },
-    {
-      "icon_id": "12737351",
-      "name": "message (1)",
-      "font_class": "message2",
-      "unicode": "e610",
-      "unicode_decimal": 58896
-    },
-    {
-      "icon_id": "12747059",
-      "name": "right",
-      "font_class": "right",
-      "unicode": "e611",
-      "unicode_decimal": 58897
-    },
-    {
-      "icon_id": "12755215",
-      "name": "menu2",
-      "font_class": "menu",
-      "unicode": "e613",
-      "unicode_decimal": 58899
-    },
-    {
-      "icon_id": "12757425",
-      "name": "close (1)",
-      "font_class": "close",
-      "unicode": "e615",
-      "unicode_decimal": 58901
     }
   ]
 }

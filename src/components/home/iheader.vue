@@ -1,14 +1,16 @@
 <template>
   <div class="header">
     <img class="icon-img" src="../../common/img/menu.png"/>
-    <div class="user"><img src="../../common/img/user_no_login.png"/></div>
+    <div class="user"><img src="../../common/img/bilibili.png"/></div>
     <div class="search">
       <img class="icon-search" src="../../common/img/icon_search.png"/>
       <div class="search-box" @click="searchClick">{{defaultWord}}</div>
     </div>
-    <img class="icon-img" src="../../common/img/game.png"/>
-    <img class="icon-img" src="../../common/img/download.png"/>
-    <img class="icon-img" src="../../common/img/envelope.png"/>
+    <i class="iconfont icon-tiaosebantubiao set-color" @click="changeTheme"></i>
+    <i class="iconfont icon-lishijilu"></i>
+    <i class="iconfont icon-shoucang"></i>
+    <!--<img class="icon-img" src="../../common/img/download.png"/>-->
+    <!--<img class="icon-img" src="../../common/img/envelope.png"/>-->
   </div>
 </template>
 
@@ -24,6 +26,9 @@ export default {
   methods: {
     searchClick () {
       this.$emit('searchClick')
+    },
+    changeTheme () {
+      this.$router.push('/Theme')
     }
   }
 }
@@ -37,10 +42,18 @@ export default {
     padding: 0.13rem 0;
     height: 0.62rem;
     display: flex;
-    background-color: #fb7299;
+    @include background-main-color($theme-pink);
+    /*background-color: #fb7299;*/
     align-items: center;
     justify-content: space-between;
     z-index: 1002;
+    .iconfont{
+      color: #fff;
+      font-size: .45rem;
+    }
+    .icon-shoucang{
+      margin-right: .15rem;
+    }
     .icon-img{
       width: 0.45rem;
       height: 0.45rem;
@@ -56,17 +69,18 @@ export default {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
-      width: 0.7rem;
-      height: 0.7rem;
+      background: #eee;
       img{
-        width: 100%;
-        height: 100%;
+        width: 20px;
+        height: 20px;
+        display: block;
+        padding: 0.1rem;
       }
     }
   }
   .search{
     height: 0.48rem;
-    background: rgba(230,104,141,0.5);
+    background: #fffcfc;
     border-radius: .512rem;
     margin-right: .3rem;
     padding: 0 .22rem;

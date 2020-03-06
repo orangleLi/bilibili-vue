@@ -605,13 +605,13 @@ export default {
         height: 100%;
       }
       .finished{
-        background: $theme;
+        @include background-main-color($theme-pink);
       }
     }
     .progress-btn{
       position: absolute;
       font-size: 15px;
-      color: $theme;
+      @include theme-main-color($theme-pink);
       top: 50%;
       left: 0;
       transform: translate(-4px, -50%);
@@ -661,9 +661,10 @@ export default {
       margin: 0 .5rem;
     }
     .active{
-      color: $theme;
+      @include theme-main-color($theme-pink);
       padding: .15rem;
-      border-bottom: 0.03rem solid $theme;
+      @include theme-border-color($theme-pink);
+      border-bottom: 0.03rem solid;
     }
   }
   .reply-detail{

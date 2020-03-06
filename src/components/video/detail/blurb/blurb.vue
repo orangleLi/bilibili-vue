@@ -60,7 +60,8 @@
     <div class="tags-box" ref="tagsBox">
       <div :class="'tags ' + (showTag ? 'hide' : '')">
         <div class="tags-item" v-for="(item, index) in tags" :key="index">
-          <img v-if="index < 3" src="../../../../common/img/icon_tag.png" />
+          <!--<img v-if="index < 3" src="../../../../common/img/icon_tag.png" />-->
+          <i v-if="index < 3" class="iconfont icon-method-draw-image"></i>
           <span :class="index < 3 ? 'active' : ''">{{item.tag_name}}</span>
         </div>
       </div>
@@ -262,17 +263,6 @@ export default {
       vertical-align: text-top;
     }
   }
-  /*.intro-tag-enter-active, .intro-tag-leave-active{
-      transition: all .5s;
-    }
-  .intro-tag-enter, .intro-tag-leave-to{
-    -webkit-transform: translateY(-100px);
-    -moz-transform: translateY(-100px);
-    -ms-transform: translateY(-100px);
-    -o-transform: translateY(-100px);
-    transform: translateY(-100px);
-    opacity: 0;
-  }*/
   .desc{
     font-size: $size24;
     white-space: pre-wrap;
@@ -327,13 +317,12 @@ export default {
         border-radius: .4rem;
         margin-right: .2rem;
         margin-bottom: .15rem;
-        img{
-          width: .25rem;
-          height: .25rem;
-          margin-right: .05rem;
+        .iconfont{
+          font-size: .25rem;
+          @include theme-main-color($theme-pink);
         }
         span.active{
-          color: $theme;
+          @include theme-main-color($theme-pink);
         }
       }
     }
