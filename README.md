@@ -49,4 +49,7 @@ npm run dev
 视频
 ![](https://orangleli.github.io/imagesResources/详情.png)
 
+换肤
+![](https://orangleli.github.io/imagesResources/theme-ex.png)
+
 ### 本项目只用于学习交流，请勿用于商业行为，如有问题，请联系1277947446@qq.com，感谢bilibili团队
