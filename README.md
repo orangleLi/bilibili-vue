@@ -22,7 +22,7 @@
 
 8. 一键换肤
 
-9. 自定义组件loading、modal
+9. 自定义模态框组件loading、alert
 
 ```
 import alertModal from './base/alertModal/alertModal'
