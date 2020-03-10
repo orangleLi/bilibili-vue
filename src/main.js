@@ -8,14 +8,15 @@ import VueLazyload from 'vue-lazyload'
 import {get, post} from './api/axios'
 import './common/js/rem'
 import './common/font/iconfont.css'
+import alertModal from './base/alertModal/alertModal'
 
 Vue.config.productionTip = false
 
-// Vue.use(VueLazyload)
 Vue.use(VueLazyload, {
   loading: require('./common/img/tv.png'),
   error: require('./common/img/tv.png')
 })
+Vue.use(alertModal)
 Vue.prototype.$get = get
 Vue.prototype.$post = post
 router.beforeEach((to, from, next) => {

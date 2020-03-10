@@ -33,10 +33,7 @@ export default {
       ranking: [],
       categoryList: [],
       isCategory: false,
-      defaultWord: '',
-      // aid: '56467196'
-      aid: '2660357'
-      // aid: '69117716'
+      defaultWord: ''
     }
   },
   created () {
@@ -66,15 +63,14 @@ export default {
       // let detail = await this.$get('/detail', {
       //   aid: this.aid
       // })
+      this.$message.showLoading({
+        title: '加载中...'
+      })
       let ranking = await this.$get('/ranking')
       if (ranking.code === 0) {
-        // detail.data.play = detail.data.stat.view // 播放量
-        // detail.data.video_review = detail.data.stat.danmaku // 弹幕
-        // detail.data.mid = detail.data.owner.mid
-        // let newDetail = this.setList(ranking.data.list[0], detail.data)
-        // ranking.data.list.unshift(newDetail)
         this.ranking = ranking.data.list
       }
+      this.$message.hideLoading()
     },
     setList (video, detail) {
       let newDetail = {}
