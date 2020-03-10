@@ -22,6 +22,15 @@
 
 8. 一键换肤
 
+9. 自定义组件loading、modal
+
+```
+import alertModal from './base/alertModal/alertModal'
+Vue.use(alertModal)
+
+this.$message.showLoading()
+this.$message.hideLoading()
+```
 弹幕效果现在全部内容是从右向左滚动的效果，等后续再实现高级效果
 
 项目启动
