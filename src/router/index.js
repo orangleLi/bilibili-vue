@@ -9,7 +9,7 @@ import Channel from '@/components/channel/channel'
 import pageNotFound from '@/base/page404'
 
 Vue.use(Router)
-// Router.befoe
+
 export default new Router({
   mode: 'history',
   routes: [
