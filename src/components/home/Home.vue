@@ -60,9 +60,6 @@ export default {
       }
     },
     async getRanking () {
-      // let detail = await this.$get('/detail', {
-      //   aid: this.aid
-      // })
       this.$alert.showLoading({
         title: '加载中...'
       })
@@ -82,18 +79,26 @@ export default {
       return newDetail
     },
     async clickCategory (data) {
+      this.$alert.showLoading({
+        title: '加载中...'
+      })
       if (data) {
         let main = await this.getRegion(data.id)
-        let arr = []
-        for (let i = 0; i < data.ids.length; i++) {
-          arr.push(this.getRegion(data.ids[i]))
-        }
+        let arr = data.ids.reduce((total, cur, index) => {
+          total.push(this.getRegion(data.ids[index]))
+          return total
+        }, [])
         Promise.all(arr).then(res => {
           res.unshift(main)
           this.$set(this, 'categoryList', res)
           this.isCategory = true
+          this.$alert.hideLoading()
+        }).catch(err => {
+          console.log(err)
+          this.$alert.hideLoading()
         })
       } else {
+        this.$alert.hideLoading()
         this.isCategory = false
       }
     },
