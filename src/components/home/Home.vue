@@ -63,14 +63,14 @@ export default {
       // let detail = await this.$get('/detail', {
       //   aid: this.aid
       // })
-      this.$message.showLoading({
+      this.$alert.showLoading({
         title: '加载中...'
       })
       let ranking = await this.$get('/ranking')
       if (ranking.code === 0) {
         this.ranking = ranking.data.list
       }
-      this.$message.hideLoading()
+      this.$alert.hideLoading()
     },
     setList (video, detail) {
       let newDetail = {}

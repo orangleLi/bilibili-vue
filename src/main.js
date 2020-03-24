@@ -8,7 +8,7 @@ import VueLazyload from 'vue-lazyload'
 import {get, post} from './api/axios'
 import './common/js/rem'
 import './common/font/iconfont.css'
-import alertModal from './base/alertModal/alertModal'
+import alertModal from 'vue-alert-modal/vue-alert-modal'
 
 Vue.config.productionTip = false
 

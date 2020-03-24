@@ -80,7 +80,6 @@ export default {
     changeTheme (name, color, index) {
       this.nowIndex = index
       this.setColors(color)
-      // localStorage.setItem('theme', color)
       window.document.documentElement.setAttribute('background-main-color', name)
       window.document.documentElement.setAttribute('theme-main-color', name)
       window.document.documentElement.setAttribute('theme-border-color', name)
