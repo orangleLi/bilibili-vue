@@ -68,7 +68,7 @@
         <div class="intor-title" v-if="!showReplyDetail" v-show="!isHScreen">
           <div :class="'item ' + (swiperCurrent === 0 ? 'active' : '')" @click="switchTagClick(0)">简介</div>
           <div :class="'item ' + (swiperCurrent === 1 ? 'active' : '')" @click="switchTagClick(1)">评论</div>
-          <div class="item">点我发弹幕</div>
+          <div class="item" @click="toSendDm">点我发弹幕</div>
         </div>
         <div v-show="!isHScreen" class="intor-title reply-detail" v-else>
           <span>评论详情</span>
@@ -89,6 +89,7 @@
         </swiper>
       </div>
       <comment-detail v-show="!isHScreen" :showCoDetail="showReplyDetail" ref="commentDetail"></comment-detail>
+      <send-dm ref="dmComponent" :top="top" v-if="showDm" @close="showDm = !showDm" @send="send"></send-dm>
     </div>
 </template>
 
@@ -98,7 +99,9 @@ import 'swiper/dist/css/swiper.css'
 import Blurb from './blurb/blurb'
 import Icomment from './comment/icomment'
 import CommentDetail from './comment/comment-detail'
+import sendDm from '../../../base/sendDM'
 import {getNetworkType, setDuration} from '../../../common/js/util'
+
 // import flvjs from 'flv.js'
 export default {
   name: 'wx-detail',
@@ -131,7 +134,9 @@ export default {
       speedModal: false,
       dm: [],
       dmIsIn: false,
-      r: 1080 / 1920
+      r: 1080 / 1920,
+      showDm: false, // 是否显示发送弹幕框
+      top: 0
     }
   },
   created () {
@@ -356,10 +361,16 @@ export default {
         box.appendChild(item)
       }
     },
-    send (txt) {
+    send (txt, color, fontsize) {
       if (!this.$refs.dmBox) return
+      if (!txt) {
+        this.$alert.showToast({
+          title: '没有内容',
+          icon: 'none'
+        })
+      }
       let channelI = Math.floor(Math.random() * 10)
-      this.$refs.dmBox.childNodes[channelI].innerHTML = `<span class="dm-ani">${txt}</span>`
+      this.$refs.dmBox.childNodes[channelI].innerHTML = `<span class="dm-ani" style="color: ${color};font-size: ${fontsize}px;">${txt}</span>`
     },
     async getDm () {
       let dm = await this.$get('/dm', {
@@ -372,6 +383,12 @@ export default {
         aid: this.aid
       })
       console.log(recommend)
+    },
+    toSendDm () {
+      this.showDm = !this.showDm
+      // this.$nextTick(() => {
+      this.top = document.getElementsByClassName('fixed-box')[0].clientHeight + 'px'
+      // })
     },
     switchTag (realIndex) {
       this.swiperCurrent = realIndex
@@ -427,7 +444,8 @@ export default {
     Icomment,
     Blurb,
     swiper,
-    swiperSlide
+    swiperSlide,
+    sendDm
   }
 }
 </script>
@@ -580,7 +598,7 @@ export default {
       & > span{
         position: absolute;
         right: -300px;
-        animation: move 10s
+        animation: move 15s
       }
     }
   }

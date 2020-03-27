@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "383637",
+      "name": "纸飞机",
+      "font_class": "zhifeiji",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
       "icon_id": "6732042",
       "name": "对勾_画板 1 副本 35",
       "font_class": "duigou_huabanfuben",
