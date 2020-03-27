@@ -4,12 +4,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  color: '#fb7299'
+  color: '#fb7299',
+  historyDm: []
 }
 const mutations = {
   setColors (state, color) {
     state.color = color
-    console.log(color)
+  },
+  setHistoryDm (state, dm) {
+    state.historyDm.push(dm)
   }
 }
 const actions = {

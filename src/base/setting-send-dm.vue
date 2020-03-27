@@ -6,7 +6,10 @@
             :class="'opera-left-item ' + (activeIndex === index ? 'active' : '')">{{item}}</div>
         </div>
         <div class="opera-panel">
-            <div class="font-size-color-panel" v-show="activeIndex === 0">
+            <div class="used-phrase phrase" v-show="activeIndex === 0">
+                <div class="used-phrase-item" v-for="(item, index) in usedPhrase" :key="index" @click="setContent(item)">{{item}}</div>
+            </div>
+            <div class="font-size-color-panel" v-show="activeIndex === 1">
                 <div class="color-panel font-size-color-panel-item">
                     <div class="color-item" v-for="(item, index) in color" :key="index" :style="getStyle(item)" @click="setColor(item)"></div>
                 </div>
@@ -14,20 +17,18 @@
                     <div class="font-size-item" v-for="(item, index) in fontSize" :key="index" :style="getFontSize(item.size)" @click="setSize(item)">{{item.title}}</div>
                 </div>
             </div>
-            <div class="used-phrase phrase" v-show="activeIndex === 1">
-                <div class="used-phrase-item" v-for="(item, index) in usedPhrase" :key="index" @click="setContent(item)">{{item}}</div>
-            </div>
             <div class="history-panel phrase" v-show="activeIndex === 2">
-                <div class="used-phrase-item" v-for="(item, index) in historyPanel" :key="index" @click="setContent(item)">{{item}}</div>
+                <div class="used-phrase-item" v-for="(item, index) in historyDm" :key="index" @click="setHistory(item)">{{item.dm}}</div>
             </div>
         </div>
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
-      opera: ['字体', '常用语', '历史'],
+      opera: ['常用语', '字体', '历史'],
       color: ['#FF0000', '#FF6600', '#FFCC00', '#44BB44', '#0066FF', '#0000FF', '#9900FF', '#BB8C44'],
       fontSize: [
         {
@@ -48,6 +49,9 @@ export default {
       historyPanel: ['前方高能预警']
     }
   },
+  computed: mapState([
+    'historyDm'
+  ]),
   methods: {
     setColor (color) {
       this.$emit('setColor', color)
@@ -57,6 +61,9 @@ export default {
     },
     setContent (content) {
       this.$emit('setContent', content)
+    },
+    setHistory (history) {
+      this.$emit('setHistory', history)
     },
     clickOpera (index) {
       this.activeIndex = index

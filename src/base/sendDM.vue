@@ -5,7 +5,7 @@
             <input v-model="dm" placeholder="发个友善的弹幕见证下" :style="'color: ' + this.color + ';font-size: ' + fontsize + 'px;'">
             <i class="iconfont icon-zhifeiji" @click="send"></i>
           </div>
-          <setting-send-dm @setColor="setColor" @setSize="setSize" @setContent="setContent"></setting-send-dm>
+          <setting-send-dm @setColor="setColor" @setSize="setSize" @setContent="setContent" @setHistory="setHistory"></setting-send-dm>
         </div>
         <div :style="'top: ' + top" class="mask" @click="close"></div>
     </div>
@@ -36,9 +36,12 @@ export default {
     setContent (content) {
       this.dm = content
     },
-    // getStyle () {
-    //   return `font-size: ${this.fontsize}px; color: ${this.color};`
-    // },
+    setHistory (history) {
+      this.color = history.color
+      this.fontsize = history.fontsize
+      this.dm = history.dm
+      console.log(history)
+    },
     close () {
       this.$emit('close')
     },
