@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'theme',
   data () {
@@ -63,23 +62,24 @@ export default {
       ]
     }
   },
-  computed: mapState([
-    'color'
-  ]),
+  // computed: mapState([
+  //   'color'
+  // ]),
   mounted () {
-    let color = this.color || this.theme[this.nowIndex]
+    let color = this.$store.state.color || this.theme[this.nowIndex]
     this.nowIndex = this.theme.findIndex((element) => (element.color === color))
   },
   methods: {
-    ...mapMutations({
-      setColors: 'setColors'
-    }),
+    // ...mapMutations({
+    //   setColors: 'setColors'
+    // }),
     back () {
       this.$router.back()
     },
     changeTheme (name, color, index) {
       this.nowIndex = index
-      this.setColors(color)
+      this.$store.commit('setColors', color)
+      // this.setColors(color)
       window.document.documentElement.setAttribute('background-main-color', name)
       window.document.documentElement.setAttribute('theme-main-color', name)
       window.document.documentElement.setAttribute('theme-border-color', name)

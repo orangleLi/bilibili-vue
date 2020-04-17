@@ -94,7 +94,6 @@
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import Blurb from './blurb/blurb'
@@ -190,9 +189,6 @@ export default {
     }
   },
   methods: {
-    ...mapMutations({
-      setHistoryDm: 'setHistoryDm'
-    }),
     // 根据当前已播放设置进度条
     setPlayWidth (tag) {
       if (tag && this.$refs.progressBar) {
@@ -375,7 +371,7 @@ export default {
       }
       let channelI = Math.floor(Math.random() * 10)
       this.$refs.dmBox.childNodes[channelI].innerHTML = `<span class="dm-ani" style="color: ${color};font-size: ${fontsize}px;">${txt}</span>`
-      this.setHistoryDm({
+      this.$store.commit('setHistoryDm', {
         dm: txt,
         color,
         fontsize

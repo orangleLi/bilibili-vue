@@ -40,7 +40,6 @@ export default {
       this.color = history.color
       this.fontsize = history.fontsize
       this.dm = history.dm
-      console.log(history)
     },
     close () {
       this.$emit('close')
